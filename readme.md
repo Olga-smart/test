@@ -66,40 +66,40 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     > ```
     > 📦site
     >   ┣ 📂landing-page
-    >   ┃ ┣ 📜landing-page.js
-    >   ┃ ┗ 📜landing-page.pug
+    >   ┃   ┣ 📜landing-page.js
+    >   ┃   ┗ 📜landing-page.pug
     >   ┣ 📂registration
-    >   ┃ ┣ 📜registration.js
-    >   ┃ ┗ 📜registration.pug
+    >   ┃   ┣ 📜registration.js
+    >   ┃   ┗ 📜registration.pug
     >   ┗ 📂sign-in
-    >   ┃ ┣ 📜sign-in.js
-    >   ┃ ┗ 📜sign-in.pug
+    >       ┣ 📜sign-in.js
+    >       ┗ 📜sign-in.pug
     > ```
 
     > ❌ Don't do this
     > ```
     > 📦site
-    >  ┣ 📜landing-page.js
-    >  ┣ 📜landing-page.pug
-    >  ┣ 📜registration.js
-    >  ┣ 📜registration.pug
-    >  ┣ 📜sign-in.js
-    >  ┗ 📜sign-in.pug
+    >   ┣ 📜landing-page.js
+    >   ┣ 📜landing-page.pug
+    >   ┣ 📜registration.js
+    >   ┣ 📜registration.pug
+    >   ┣ 📜sign-in.js
+    >   ┗ 📜sign-in.pug
     > ```
 
     > ❌ Don't do this
     > ```
     > 📦site
-    >   ┣ 📂pages
-    >   ┃ ┣ 📂landing-page
-    >   ┃ ┃ ┣ 📜landing-page.js
-    >   ┃ ┃ ┗ 📜landing-page.pug
-    >   ┃ ┣ 📂registration
-    >   ┃ ┃ ┣ 📜registration.js
-    >   ┃ ┃ ┗ 📜registration.pug
-    >   ┃ ┗ 📂sign-in
-    >   ┃ ┃ ┣ 📜sign-in.js
-    >   ┃ ┃ ┗ 📜sign-in.pug
+    >   ┗ 📂pages
+    >       ┣ 📂landing-page
+    >       ┃   ┣ 📜landing-page.js
+    >       ┃   ┗ 📜landing-page.pug
+    >       ┣ 📂registration
+    >       ┃   ┣ 📜registration.js
+    >       ┃   ┗ 📜registration.pug
+    >       ┗ 📂sign-in
+    >           ┣ 📜sign-in.js
+    >           ┗ 📜sign-in.pug
     > ```
 
 ### Components    
@@ -129,14 +129,14 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     > ```
     > 📦header
     >   ┣ 📜header.pug
-    >   ┣ 📜header.scss   <--- this file will be imported by the plugin
+    >   ┗ 📜header.scss   <--- this file will be imported by the plugin
     > ```
 
     > ❌ Don't do this
     > ```
     > 📦header
     >   ┣ 📜header.pug
-    >   ┣ 📜style.scss    <--- plugin will not see this file
+    >   ┗ 📜style.scss    <--- plugin will not see this file
     > ```
 
 ## Settings
