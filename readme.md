@@ -1,4 +1,3 @@
-Инкуды в pug должны быть без расширений
 Именование файлов js и scss для компонентов
 extends ../../../layouts/base
 поддерживает только 1 уровень extends
@@ -31,7 +30,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 4. 
 
 ## Restrictions
-1. Incudes in `pug` should be without extensions
+1. Incudes in `pug` should be without extensions.
 
     > ✅ Do this
     > ```pug
@@ -43,8 +42,28 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     > include ../../../components/header/header.pug
     > ```
 
-2.   
+2.  `Js` component files should be named like this - `init.js`.
 
+    > ✅ Do this
+    > ```
+    > 📦header
+    >   ┣ 📜Header.js
+    >   ┣ 📜header.pug
+    >   ┣ 📜header.scss
+    >   ┗ 📜init.js
+    > ```
+
+    > ❌ Don't do this
+    > ```
+    > 📦header
+    >   ┣ 📜header.pug
+    >   ┣ 📜header.scss
+    >   ┗ 📜header.js
+    > ```
+
+    
+
+3. 
 
 ## Settings
 | Option           | Data-Attr              | Defaults | Type    | Description          |
