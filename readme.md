@@ -50,7 +50,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     >   ┣ 📜Header.js
     >   ┣ 📜header.pug
     >   ┣ 📜header.scss
-    >   ┗ 📜init.js
+    >   ┗ 📜init.js       <--- this file will be imported by the plugin
     > ```
 
     > ❌ Don't do this
@@ -58,7 +58,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     > 📦header
     >   ┣ 📜header.pug
     >   ┣ 📜header.scss
-    >   ┗ 📜header.js
+    >   ┗ 📜header.js     <--- plugin will not see this file
     > ```
 
     
