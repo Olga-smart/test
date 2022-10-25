@@ -25,6 +25,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ## How to Use
 1. Add file `AutoImportPlugin.js` to the project folder:
 2. Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
+
     > **_NOTE:_** If the `pug` page does not have a `js` file, it needs to be created.
 3. Make sure the filenames, folder structure and include syntax comply with the restrictions.
 4. 
