@@ -7,10 +7,13 @@ extends ../../../layouts/base
 AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` files of components used on the `pug` page.
 
 ## Table of Contents
-1. [Dependencies](#dependencies)
-2. [How to Use](#how-to-use)
-3. [Restrictions](#restrictions)
-4. [Settings](#settings)
+1️⃣ [Dependencies](#dependencies)
+
+2️⃣ [How to Use](#how-to-use)
+
+3️⃣ [Restrictions](#restrictions)
+
+4️⃣ [Settings](#settings)
 
 ## Dependencies
 [cross-env 7.0.3+](https://www.npmjs.com/package/cross-env)
@@ -23,11 +26,15 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ```
 
 ## How to Use
-1. Add file `AutoImportPlugin.js` to the project folder:
-2. Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
+1️⃣ Add file `AutoImportPlugin.js` to the project folder.
+
+2️⃣ Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
+
     > **_NOTE:_** If the `pug` page does not have a `js` file, it needs to be created.
-3. Make sure the filenames, folder structure and include syntax comply with the restrictions.
-4. 
+
+3️⃣ Make sure the filenames, folder structure and include syntax comply with the restrictions.
+
+4️⃣ 
 
 ## Restrictions
 1. Incudes in `pug` should be without extensions
