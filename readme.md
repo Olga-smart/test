@@ -1,4 +1,3 @@
-Именование файлов js и scss для компонентов
 extends ../../../layouts/base
 поддерживает только 1 уровень extends
 
@@ -26,10 +25,13 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 2. Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
 
     > 📌 If the `pug` page does not have a `js` file, it needs to be created.
-3. Make sure the filenames, folder structure and include syntax comply with the restrictions.
+3. Make sure the filenames, folder structure and include syntax comply with the [restrictions](#restrictions).
 4. 
 
 ## Restrictions
+
+### Pages
+
 1. Incudes in `pug` should be without extensions.
 
     > ✅ Do this
@@ -42,7 +44,67 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     > include ../../../components/header/header.pug
     > ```
 
-2.  `Js` component files should be named like this - `init.js`.
+2. The `pug` page must have the same name as the folder.
+
+    > ✅ Do this
+    > ```
+    > 📦landing-page
+    >   ┣ 📜landing-page.js
+    >   ┗ 📜landing-page.pug   <--- this file will be processed by the plugin
+    > ```
+
+    > ❌ Don't do this
+    > ```
+    > 📦landing-page
+    >   ┣ 📜landing-page.js
+    >   ┗ 📜index.pug          <--- plugin will not see this file
+    > ```
+
+3. The pages folder that we pass to the plugin should have the following structure: `[pages folder] > [page folder] > [pug ang js files of the page]`.
+
+    > ✅ Do this
+    > ```
+    > 📦site
+    >   ┣ 📂landing-page
+    >   ┃ ┣ 📜landing-page.js
+    >   ┃ ┗ 📜landing-page.pug
+    >   ┣ 📂registration
+    >   ┃ ┣ 📜registration.js
+    >   ┃ ┗ 📜registration.pug
+    >   ┗ 📂sign-in
+    >   ┃ ┣ 📜sign-in.js
+    >   ┃ ┗ 📜sign-in.pug
+    > ```
+
+    > ❌ Don't do this
+    > ```
+    > 📦site
+    >  ┣ 📜landing-page.js
+    >  ┣ 📜landing-page.pug
+    >  ┣ 📜registration.js
+    >  ┣ 📜registration.pug
+    >  ┣ 📜sign-in.js
+    >  ┗ 📜sign-in.pug
+    > ```
+
+    > ❌ Don't do this
+    > ```
+    > 📦site
+    >   ┣ 📂pages
+    >   ┃ ┣ 📂landing-page
+    >   ┃ ┃ ┣ 📜landing-page.js
+    >   ┃ ┃ ┗ 📜landing-page.pug
+    >   ┃ ┣ 📂registration
+    >   ┃ ┃ ┣ 📜registration.js
+    >   ┃ ┃ ┗ 📜registration.pug
+    >   ┃ ┗ 📂sign-in
+    >   ┃ ┃ ┣ 📜sign-in.js
+    >   ┃ ┃ ┗ 📜sign-in.pug
+    > ```
+
+### Components    
+
+1.  The `js` component files should be named like this - `init.js`.
 
     > ✅ Do this
     > ```
@@ -61,9 +123,21 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     >   ┗ 📜header.js     <--- plugin will not see this file
     > ```
 
-    
+2. The `scss` component file must have the same name as the folder.
 
-3. 
+    > ✅ Do this
+    > ```
+    > 📦header
+    >   ┣ 📜header.pug
+    >   ┣ 📜header.scss   <--- this file will be imported by the plugin
+    > ```
+
+    > ❌ Don't do this
+    > ```
+    > 📦header
+    >   ┣ 📜header.pug
+    >   ┣ 📜style.scss    <--- plugin will not see this file
+    > ```
 
 ## Settings
 | Option           | Data-Attr              | Defaults | Type    | Description          |
