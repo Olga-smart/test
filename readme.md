@@ -3,7 +3,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 
 > 📌 It is assumed that you included the necessary components yourself in the `pug` file.
 
-> 📌 The plugin was created for 1 specific project, so it does not have a flexible configuration. Please read some source file [restrictions](#restrictions) before using it.
+> 📌 The plugin was created for 1 specific project, so it does not have a flexible configuration. Please read some [source file restrictions](#restrictions) before using it.
 
 ## Table of Contents
 1. [Dependencies](#dependencies)
