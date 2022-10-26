@@ -4,6 +4,8 @@ extends ../../../layouts/base
 # AutoImportPlugin
 AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` files of components used on the `pug` page.
 
+> 📌 It is assumed that you included the necessary components yourself in the `pug` file.
+
 ## Table of Contents
 1. [Dependencies](#dependencies)
 2. [How to Use](#how-to-use)
@@ -13,7 +15,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ## Dependencies
 [cross-env 7.0.3+](https://www.npmjs.com/package/cross-env)
 
-❗On the final build NODE_ENV environment variable must be set to `production`. That is, in `package.json` there will be such a script:
+❗On the final build `NODE_ENV` environment variable must be set to `production`. That is, in `package.json` there will be such a script:
 ```json
 "scripts": {
   "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -21,12 +23,13 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ```
 
 ## How to Use
-1. Add file `AutoImportPlugin.js` to the project folder:
+1. Add file `AutoImportPlugin.js` to the project folder.
 2. Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
 
     > 📌 If the `pug` page does not have a `js` file, it needs to be created.
 3. Make sure the filenames, folder structure and include syntax comply with the [restrictions](#restrictions).
-4. 
+4. Make sure the build script (`package.json` file) is written to set the `NODE_ENV` environment variable to `production`.
+5. 
 
 ## Restrictions
 
@@ -60,7 +63,7 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     >   ┗ 📜index.pug          <--- plugin will not see this file
     > ```
 
-3. The pages folder that we pass to the plugin should have the following structure: `[pages folder] > [page folder] > [pug ang js files of the page]`.
+3. The pages folder that we pass to the plugin should have the following structure: `[pages folder] > [page folder] > [pug and js files of the page]`.
 
     > ✅ Do this
     > ```
@@ -138,6 +141,9 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
     >   ┣ 📜header.pug
     >   ┗ 📜style.scss    <--- plugin will not see this file
     > ```
+
+3. The components folder that we pass to the plugin should have the following structure: `[components folder] > [component folder] > [pug, scss and js files of the component]`.
+  
 
 ## Settings
 | Option           | Data-Attr              | Defaults | Type    | Description          |
