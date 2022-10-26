@@ -1,10 +1,9 @@
-extends ../../../layouts/base
-поддерживает только 1 уровень extends
-
 # AutoImportPlugin
 AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` files of components used on the `pug` page.
 
 > 📌 It is assumed that you included the necessary components yourself in the `pug` file.
+
+> 📌 The plugin was created for 1 specific project, so it does not have a flexible configuration. Please read some source file [restrictions](#restrictions) before using it.
 
 ## Table of Contents
 1. [Dependencies](#dependencies)
@@ -126,7 +125,9 @@ module.exports = {
     >           ┗ 📜sign-in.pug
     > ```
 
-### Components    
+4. The plugin supports only 1 level of `pug` templates. This means that the components of the template used in the pug page will be automatically imported. But if this template extends another template, then the components of that parent template will not be imported.
+
+### Components
 
 1.  The `js` component files should be named like this - `init.js`.
 
@@ -221,6 +222,5 @@ module.exports = {
     >       ┃   ┗ 📜logo.scss
     >       ┗ 📜logo.pug
     > ```
-
 
  
