@@ -11,7 +11,6 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 2. [How to Use](#how-to-use)
 3. [Initialization](#initialization)
 4. [Restrictions](#restrictions)
-5. [Settings](#settings)
 
 ## Dependencies
 [cross-env 7.0.3+](https://www.npmjs.com/package/cross-env)
@@ -165,88 +164,63 @@ module.exports = {
     > ```
 
 3. The components folder that we pass to the plugin should have the following structure: `[components folder] > [component folder] > [pug, scss and js files of the component]`.
-  
 
-## Settings
-| Option           | Data-Attr              | Defaults | Type    | Description          |
-| ---              | ---                    | ---      | ---     | ---                  |
-| `min`            | `data-min`             | `0`      | number  | Slider minimum value |
-| `max`            | `data-max`             | `100`    | number  | Slider maximum value |
-| `range`          | `data-range`           | `true`   | boolean | False for one handle, true for two handles |
-| `leftValue`      | `data-left-value`      | `25`     | number  | Start position for left/bottom handle (or for single handle) |
-| `rightValue`     | `data-right-value`     | `75`     | number  | Start position for right/top handle |
-| `step`           | `data-step`            | `1`      | number  | Slider`s step. Always > 0. Could be fractional |
-| `minMaxLabels`   | `data-min-max-labels`  | `true`   | boolean | Shows min and max labels |
-| `valueLabels`    | `data-value-labels`    | `true`   | boolean | Shows from and to labels |
-| `vertical`       | `data-vertical`        | `false`   | boolean | Makes slider vertical |
-| `scale`          | `data-scale`           | `false`  | boolean | Shows scale |
-| `scaleIntervals` | `data-scale-intervals` | `5`      | number  | Number of scale intervals |
-| `panel`          | `data-panel`           | `false`  | boolean | Enables panel for interactive slider settings |
+    > ✅ Do this
+    > ```
+    > 📦components
+    >   ┣ 📂button
+    >   ┃   ┣ 📜button.pug
+    >   ┃   ┗ 📜button.scss
+    >   ┣ 📂checklist
+    >   ┃   ┣ 📜checklist.pug
+    >   ┃   ┣ 📜checklist.scss
+    >   ┃   ┗ 📜init.js
+    >   ┣ 📂input
+    >   ┃   ┣ 📜init.js
+    >   ┃   ┣ 📜input.pug
+    >   ┃   ┗ 📜input.scss
+    >   ┗ 📂logo
+    >       ┣ 📜logo.pug
+    >       ┗ 📜logo.scss
+    > ```
 
-## Public Methods
+    > ❌ Don't do this
+    > ```
+    > 📦components
+    >   ┣ 📜button.pug
+    >   ┣ 📜button.scss
+    >   ┣ 📜checklist.pug
+    >   ┣ 📜checklist.scss
+    >   ┣ 📜input.pug
+    >   ┣ 📜input.scss
+    >   ┣ 📜logo.pug
+    >   ┗ 📜logo.scss
+    > ```
 
-To use public methods, at first you must save slider instance to variable:
-
-```javascript
-// Launch plugin
-$('.js-range-slider').rangeSlider();
-
-// Saving it's instance to variable
-const slider = $('.js-range-slider').data('rangeSlider');
-
-// Fire public method
-slider.setLeftValue(50);
-
-// Method calls can be chained
-slider.setLeftValue(50).setRightValue(80).setStep(10);
-```
-
-There are 3 public methods, whose names speak for themselves:
-``` javascript
-// setLeftValue
-slider.setLeftValue(50);
-
-// setRightValue
-slider.setRightValue(80);
-
-// setStep
-slider.setStep(10);
-```
-
-## Events
-
-You may add your own handler for slider values change event:
-``` javascript
-// Launch plugin
-$('.js-range-slider').rangeSlider();
-
-// Saving it's instance to variable
-const slider = $('.js-range-slider').data('rangeSlider');
-
-// Write your event handler
-slider.onChange = (leftValue, rightValue) => {
-  // your code to be executed when the slider values ​​change
-};
-```
-
-Also you may use only 1 parameter:
-``` javascript
-slider.onChange = (leftValue) => {
-  // your code to be executed when the slider values ​​change
-};
-``` 
-
-Or even without parameters:
-``` javascript
-slider.onChange = () => {
-  // your code to be executed when the slider values ​​change
-};
-```
-
-You may easily remove this handler later:
-``` javascript
-delete slider.onChange;
-```
+    > ❌ Don't do this
+    > ```
+    > 📦components
+    >   ┣ 📂button
+    >   ┃   ┣ 📂scss
+    >   ┃   ┃   ┗ 📜button.scss
+    >   ┃   ┗ 📜button.pug
+    >   ┣ 📂checklist
+    >   ┃   ┣ 📂js
+    >   ┃   ┃   ┗ 📜init.js
+    >   ┃   ┣ 📂scss
+    >   ┃   ┃   ┗ 📜checklist.scss
+    >   ┃   ┗ 📜checklist.pug
+    >   ┣ 📂input
+    >   ┃   ┣ 📂js
+    >   ┃   ┃   ┗ 📜init.js
+    >   ┃   ┣ 📂scss
+    >   ┃   ┃   ┗ 📜input.scss
+    >   ┃   ┗ 📜input.pug
+    >   ┗ 📂logo
+    >       ┣ 📂scss
+    >       ┃   ┗ 📜logo.scss
+    >       ┗ 📜logo.pug
+    > ```
 
 
  
