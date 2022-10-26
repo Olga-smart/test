@@ -9,8 +9,9 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ## Table of Contents
 1. [Dependencies](#dependencies)
 2. [How to Use](#how-to-use)
-3. [Restrictions](#restrictions)
-4. [Settings](#settings)
+3. [Initialization](#initialization)
+4. [Restrictions](#restrictions)
+5. [Settings](#settings)
 
 ## Dependencies
 [cross-env 7.0.3+](https://www.npmjs.com/package/cross-env)
@@ -23,13 +24,34 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 ```
 
 ## How to Use
-1. Add file `AutoImportPlugin.js` to the project folder.
+1. Add the file `AutoImportPlugin.js` to the project folder.
 2. Add `import './autoimport';` to all `js` files of all `pug` pages for which you want to set up auto import.
 
     > 📌 If the `pug` page does not have a `js` file, it needs to be created.
 3. Make sure the filenames, folder structure and include syntax comply with the [restrictions](#restrictions).
-4. Make sure the build script (`package.json` file) is written to set the `NODE_ENV` environment variable to `production`.
-5. 
+4. Make sure the build script (`package.json` file) is written to set the `NODE_ENV` environment variable to `production` (see [dependencies](#dependencies)).
+5. [Initialize](#initialization) the plugin in the webpack config file.
+
+## Initialization
+```js
+// webpack.config.js
+const AutoImportPlugin = require('./path/to/AutoImportPlugin');
+
+module.exports = {
+  plugins: [
+    new AutoImportPlugin({
+      pages: path.resolve(__dirname + '/path/to/folder/with/site/pages'),
+      components: path.resolve(__dirname + '/path/to/folder/with/components')
+    }),
+  ]
+}
+```
+
+> 📌 `__dirname` is an environment variable that tells you the absolute path of the directory containing the currently executing file (webpack config file in our case). To use it you need to include the `Node` module `path`, which provides utilities for working with file and directory paths:
+> ```js
+> // webpack.config.js
+> const path = require('path');
+> ```
 
 ## Restrictions
 
