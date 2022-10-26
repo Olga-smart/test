@@ -127,7 +127,7 @@ module.exports = {
     >           ┗ 📜sign-in.pug
     > ```
 
-4. The plugin supports only 1 level of `pug` templates. This means that the components of the template used in the pug page will be automatically imported. But if this template extends another template, then the components of that parent template will not be imported.
+4. The plugin supports only 1 level of `pug` templates. This means that the components of the template used in the `pug` page will be automatically imported. But if this template extends another template, then the components of that parent template will not be imported.
 
 ### Components
 
