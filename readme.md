@@ -30,6 +30,8 @@ AutoImportPlugin is a Webpack plugin that automatically imports `js` and `scss` 
 4. Make sure the build script (`package.json` file) is written to set the `NODE_ENV` environment variable to `production` (see [dependencies](#dependencies)).
 5. [Initialize](#initialization) the plugin in the webpack config file.
 
+ > 📌 On abnormal shutdown (for example, if you exit development mode by simply closing the console), auto-generated `autoimport.js` files will remain in the source files. It won't break anything. You can remove them manually, or they will be removed automatically the next time you run the build.
+
 ## Initialization
 ```js
 // webpack.config.js
@@ -80,7 +82,7 @@ module.exports = {
     > ```
     > 📦landing-page
     >   ┣ 📜landing-page.js
-    >   ┗ 📜index.pug          <--- plugin will not see this file
+    >   ┗ 📜index.pug          <--- the plugin will not see this file
     > ```
 
 3. The pages folder that we pass to the plugin should have the following structure: `[pages folder] > [page folder] > [pug and js files of the page]`.
@@ -145,7 +147,7 @@ module.exports = {
     > 📦header
     >   ┣ 📜header.pug
     >   ┣ 📜header.scss
-    >   ┗ 📜header.js     <--- plugin will not see this file
+    >   ┗ 📜header.js     <--- the plugin will not see this file
     > ```
 
 2. The `scss` component file must have the same name as the folder.
@@ -161,7 +163,7 @@ module.exports = {
     > ```
     > 📦header
     >   ┣ 📜header.pug
-    >   ┗ 📜style.scss    <--- plugin will not see this file
+    >   ┗ 📜style.scss    <--- the plugin will not see this file
     > ```
 
 3. The components folder that we pass to the plugin should have the following structure: `[components folder] > [component folder] > [pug, scss and js files of the component]`.
@@ -222,5 +224,3 @@ module.exports = {
     >       ┃   ┗ 📜logo.scss
     >       ┗ 📜logo.pug
     > ```
-
- 
