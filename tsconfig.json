@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es6",
+    "strict": true,
+    "removeComments": true,
+    "allowJs": true,
+    "lib": ["dom", "es2015", "dom.iterable"],
+    "module": "esnext",
+    "outDir": "./dist",
+    "declarationDir": "./dist/types",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]   
+}

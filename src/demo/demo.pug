@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="initial-scale=1.0, width=device-width")
+    title Range slider
+  body.demo
+    .demo__container
+      h1 Demo
+
+      section.demo__section
+        h2 Default params
+        .range-slider.js-range-slider
+
+      section.demo__section
+        h2 Minimalistic
+        .range-slider.js-range-slider(
+          data-min-max-labels="false",
+          data-value-labels="false",
+        )
+
+      section.demo__section
+        h2 Single
+        .range-slider.js-range-slider(
+          data-range="false"
+        )
+
+      section.demo__section
+        h2 With scale
+        .range-slider.js-range-slider(
+          data-scale="true"
+        )  
+
+      section.demo__section
+        h2 Vertical
+        .range-slider.js-range-slider(
+          data-vertical="true"
+        )
+
+    

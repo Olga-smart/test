@@ -1,0 +1,16 @@
+{
+  "testEnvironment": "jsdom",
+  "collectCoverage": true,
+  "moduleFileExtensions": [
+    "js",
+    "mjs",
+    "ts"
+  ],
+  "transform": {
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.mjs$": "babel-jest",   
+    "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+  },
+  "preset": "jest-puppeteer",
+  "coverageReporters": ["json-summary"]
+}
