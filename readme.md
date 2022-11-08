@@ -1,6 +1,6 @@
 # RangeSlider
 Easy to use, flexible and responsive range slider.
-[Demo](https://olga-smart.github.io/FSD_4/dist/demo/demo.html) 
+[Demo](https://olga-smart.github.io/test/dist/demo/demo.html) 
 
 ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Folga-smart.github.io%2FFSD_4%2Fdist%2Fdemo%2Fdemo.html)
 ![GitHub top language](https://img.shields.io/github/languages/top/Olga-smart/FSD_4)
