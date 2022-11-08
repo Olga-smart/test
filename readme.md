@@ -2,7 +2,7 @@
 Easy to use, flexible and responsive range slider.
 [Demo](https://olga-smart.github.io/test/demo/demo.html) 
 
-![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Folga-smart.github.io%2FFSD_4%2Fdist%2Fdemo%2Fdemo.html)
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Folga-smart.github.io%2FFSD_4%2Fdemo%2Fdemo.html)
 ![GitHub top language](https://img.shields.io/github/languages/top/Olga-smart/FSD_4)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/Olga-smart/FSD_4)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Olga-smart/FSD_4)
