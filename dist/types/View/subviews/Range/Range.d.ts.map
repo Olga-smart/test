@@ -1,1 +1,0 @@
-{"version":3,"file":"Range.d.ts","sourceRoot":"","sources":["../../../../../src/View/subviews/Range/Range.ts"],"names":[],"mappings":"AAAA,OAAO,WAAW,MAAM,+BAA+B,CAAC;AAExD,cAAM,KAAM,SAAQ,WAAW,CAAC,KAAK,CAAC;;IAKpC,QAAQ,CAAC,OAAO,EAAE,MAAM,GAAG,IAAI;IAI/B,SAAS,CAAC,OAAO,EAAE,MAAM,GAAG,IAAI;IAIhC,UAAU,IAAI,IAAI;IAIlB,WAAW,IAAI,IAAI;IAInB,cAAc,IAAI,IAAI;CAGvB;AAED,eAAe,KAAK,CAAC"}
