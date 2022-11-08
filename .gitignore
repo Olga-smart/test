@@ -3,7 +3,6 @@ node_modules/
 *.log
 screenshots/
 coverage/
-dist/
 
 # OS generated files
 .DS_Store
