@@ -279,4 +279,17 @@ Test coverage:
 ![Functions](https://img.shields.io/badge/functions-98.07%25-brightgreen.svg?style=flat)
 ![Lines](https://img.shields.io/badge/lines-98.71%25-brightgreen.svg?style=flat)
 
+#### Deploy
+
+To update the [demo](https://olga-smart.github.io/FSD_4/demo/demo.html), run the command:
+``` bash
+npm run deploy
+```
+
+You need to have dist folder with generated files to run this command. So if you don't have dist folder [make a build](#making-the-build) before. 
+
+#### Commit
+
+You need to have dist folder with generated files to make commit because tests run on every commit. So if you don't have dist folder [make a build](#making-the-build) before.
+
  
